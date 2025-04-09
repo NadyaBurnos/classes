@@ -13,16 +13,16 @@ export default class Character {
             this.name = name;
         }
         else {
-            throw new Error('Ошибка!');
+            throw new Error("Ошибка");
         }
         if ( types.includes(type) ) {
             this.type = type;
         } 
         else {
-            throw new Error('Ошибка!');
+            throw new Error("Ошибка");
         }
 
-        this.heart = 100;
+        this.health = 100;
         this.level = 1;
         this.attack = attack;
         this.defence = defence;

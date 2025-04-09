@@ -1,4 +1,4 @@
-import Character from './characters.js';
+import Character from './characters';
 
 export default class Magician extends Character {
     constructor(name, type) {
