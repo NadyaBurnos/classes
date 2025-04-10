@@ -9,22 +9,19 @@ export default class Character {
             'Zombie',
         ]
 
-        if (name.length >= 2 && name.length <= 10) {
-            this.name = name;
-        }
-        else {
+        if (name.length < 2 || name.length > 10) {
+            throw new Error("Ошибка");
+        } else if (types.indexOf(type) === -1) {
             throw new Error("Ошибка");
         }
-        if ( types.includes(type) ) {
-            this.type = type;
-        } 
-        else {
-            throw new Error("Ошибка");
-        }
+        this.name = name;
+        this.type = type;
 
         this.health = 100;
         this.level = 1;
         this.attack = attack;
         this.defence = defence;
     }
+
+
 }
